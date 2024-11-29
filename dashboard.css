@@ -1,0 +1,304 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    color: #333;
+}
+
+
+
+/* Main content */
+.main-content {
+    flex-grow: 1;
+    background-color: #f9f9f9;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ddd;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+header .welcome-message {
+    font-size: 18px;
+}
+
+header .user-options {
+    font-size: 14px;
+}
+
+header .user-options a {
+    color: #4b0082;
+    text-decoration: none;
+}
+
+header .user-options a:hover {
+    text-decoration: underline;
+}
+
+/* Content */
+.content h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table th, table td {
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+table th {
+    background-color: #4b0082;
+    color: white;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    color: white;
+}
+
+.status.on-progress {
+    background-color: yellow;
+    color: black;
+}
+
+.status.pending {
+    background-color: red;
+}
+
+.status.completed {
+    background-color: green;
+}
+
+
+
+/* Pending status */
+.status.pending {
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* In Progress status */
+  .status.on-progress {
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Completed status */
+  .status.completed {
+    color: white;
+    font-weight: bold;
+  }
+
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #4b0082;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 10px 0;
+}
+
+.sidebar nav ul li ul {
+    margin-top: 5px;
+    padding-left: 15px;
+    font-size: 14px;
+    display: none; /* Initially hidden */
+}
+
+.sidebar nav ul li ul.hidden {
+    display: none;
+}
+
+.sidebar nav ul li ul.visible {
+    display: block;
+}
+
+.sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+    
+}
+
+.sidebar nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Toggle Button Style */
+.toggle-button {
+    /* background-color: #6a0dad; */
+    color: white;
+    border: none;
+    /* padding: 8px 15px; */
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+
+
+
+
+/* Authentication Dropdown */
+.user-options {
+    position: relative;
+    display: inline-block;
+}
+
+.auth-button {
+    background-color: transparent;
+    border: none;
+    color: #4b0082;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.auth-button:hover {
+    text-decoration: underline;
+    color: #6a0dad;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    list-style: none;
+    margin: 5px 0 0;
+    padding: 0;
+    width: 120px;
+    display: none; /* Hidden by default */
+    z-index: 1000;
+}
+
+.dropdown.visible {
+    display: block;
+}
+
+.dropdown-item {
+    width: 100%;
+    padding: 10px 15px;
+    text-align: left;
+    background-color: transparent;
+    border: none;
+    color: #4b0082;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0;
+    color: #6a0dad;
+}
+
+
+/* Language change */
+
+.language-button {
+    background-color: transparent;
+    border: none;
+    color: #4b0082;
+    font-size: 14px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.language-button:hover {
+    text-decoration: underline;
+    color: #6a0dad;
+}
+
+/* Right-to-Left (RTL) support */
+body.rtl {
+    direction: rtl;
+}
+
+body.ltr {
+    direction: ltr;
+}
+
+body {
+    direction: ltr;
+    text-align: left;
+}
+
+
+
+.project1{
+    text-decoration: none;
+    color: black;
+}
+
+
+/* progress bar */
+.progress-bar-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color: white;
+    border-radius: 5px;
+  }
+  .red {
+    background-color: red;
+  }
+  .yellow {
+    background-color: yellow;
+    color: black;
+  }
+  .green {
+    background-color: green;
+  }
+  
+
+  

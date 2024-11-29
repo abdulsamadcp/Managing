@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    
+</head>
+<body>
+    <div class="sidebar">
+        <h2>ADMIN</h2>
+        <nav>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li>
+                    <a id="projectToggle" class="toggle-button">Projects</a>
+                    <ul id="projectSubmenu" class="submenu hidden">
+                        <li><a href="./addProject.html">Add New</a></li>
+                        <li><a href="#">List</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Task</a></li>
+                <li><a href="#">Reports</a></li>
+                <li>
+                    Users
+                    <ul>
+                        <li><a href="#">Add New</a></li>
+                        <li><a href="#">List</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    
+    <div class="main-content">
+        <header>
+            <div class="welcome-message">
+                Welcome Administrator!
+            </div>
+            
+                <div class="user-options">
+                    <button id="authButton" class="auth-button">Log in</button>
+                    <ul id="authDropdown" class="dropdown hidden">
+                        <li><button id="logoutButton" class="dropdown-item">Log out</button></li>
+                    </ul>
+                
+                <button id="languageToggle" class="language-button">عربي</button>
+            </div>
+        </header>
+        
+        <section class="content">
+            <h2>Project Progress</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Project</th>
+                        <th>Service</th>
+                        <th>Status</th>
+                        <th>Progress</th>
+                        <th>Action</th>
+                        
+                        
+                        
+                        
+                    </tr>
+                </thead>
+                
+                
+                <tbody id="projectsContainer"></tbody>
+                
+
+            </table>
+        </section>
+    </div>
+    <script src="./dashboard.js"></script>
+
+    <!-- script file for data  -->
+
+    <script>
+        function viewProject(projectId) {
+            // Fetch the project details (can be fetched from a backend or local data)
+            const projects = JSON.parse(localStorage.getItem('projects')) || [];
+            const project = projects.find(p => p.id === projectId);
+    
+            // Store the project in localStorage for viewing and editing
+            localStorage.setItem('selectedProject', JSON.stringify(project));
+    
+            // Navigate to the View Project page
+            window.location.href = 'view_project.html';
+        }
+    </script>
+
+
+</body>
+</html>

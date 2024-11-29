@@ -1,0 +1,30 @@
+<section class="task-list">
+                <h2>Task List</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Task</th>
+                            <th>Description</th>
+                            <th>Status</th>
+                            <th>Employee</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Sample project 1<br><small>Due: 2024-01-20</small></td>
+                            <td>febrierbgie fnowrefo oierwofhwhf</td>
+                            <td><span class="status on-progress">On progress</span></td>
+                            <td>Employee 1</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Sample project 2<br><small>Due: 2024-01-20</small></td>
+                            <td>febrierbgie fnowrefo oierwofhwhf</td>
+                            <td><span class="status started">Started</span></td>
+                            <td>Employee 1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>

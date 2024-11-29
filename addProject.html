@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>add Project</title>
+  <link rel="stylesheet" href="addProject.css">
+</head>
+<body>
+  <div class="sidebar">
+    <h2>ADMIN</h2>
+    <nav>
+        <ul>
+            <li><a href="./dashboard.html">Dashboard</a></li>
+            <li>
+                <a id="projectToggle" class="toggle-button">Projects</a>
+                <ul id="projectSubmenu" class="submenu hidden">
+                    <li><a href="">Add New</a></li>
+                    <li><a href="#">List</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Task</a></li>
+            <li><a href="#">Reports</a></li>
+            <li>
+                Users
+                <ul>
+                    <li><a href="#">Add New</a></li>
+                    <li><a href="#">List</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+  </div>
+
+    
+    <main class="content">
+      <header>
+        <h1>New Project</h1>
+      </header>
+      <form class="form">
+        <div class="form-group">
+          <label for="company-name">Company Registered Name</label>
+          <input type="text" id="company-name" placeholder="Name the company">
+        </div>
+       
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label for="phone-number">Phone Number</label>
+          <input type="text" id="phone-number" placeholder="Enter the phone">
+        </div>
+        <div class="form-group">
+          <label for="Address">Address</label>
+        <textarea id=Address rows="4" cols="20" placeholder="Enter your Address"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="city">city</label>
+          <input type="text" id="city" placeholder="Enter your city">
+        </div>
+        <div class="form-group">
+          <label for="country">country</label>
+          <input type="text" id="country" placeholder="Enter your country">
+        </div>
+        <div class="form-group">
+          <label for="manager-name">General manager Name</label>
+          <input type="text" id="manager-name" placeholder="Enter the general manager name">
+        </div>
+        <div class="form-group">
+          <label for="company-activity">Company activity</label>
+          <select id="company-activity">
+            <option>Health</option>
+            <option>Food</option>
+            <option>Service</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="service">Select the service</label>
+          <select id="service">
+            <option>Issuing License</option>
+            <option>Foreign Investment</option>
+            <option>Issuing Trademark</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="coordinator">Project Coordinator</label>
+          <select id="coordinator">
+            <option>Abdullah</option>
+            <option>Jumana</option>
+            <option>Safwan</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="status">Status</label>
+          <select id="status">
+            <option>Pending</option>
+            <option>Completed</option>
+            <option>In Progress</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="start-date">Start Date</label>
+          <input type="date" id="start-date">
+        </div>
+        <div class="form-group">
+          <label for="end-date">End Date</label>
+          <input type="date" id="end-date">
+        </div>
+        <div class="form-group">
+          <label for="myfile">Upload Files</label>
+          <input type="file" id="myFile" name="filename"><br>
+
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea id="description" rows="5" placeholder="Enter description"></textarea>
+        </div>
+        
+        <div>
+          <button id="addProjectButton" type="submit" class="btn-submit">Submit</button>
+
+        </div>
+      </form>
+    </main>
+  </div>
+
+ 
+  <script src="./addProject.js"></script>
+</body>
+</html>

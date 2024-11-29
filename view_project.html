@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Project</title>
+    <link rel="stylesheet" href="view_project.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-header">ADMIN</div>
+            <nav>
+                <ul>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li class="has-dropdown">
+                        <button class="dropdown-btn">Projects</button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Add New</a></li>
+                            <li><a href="#">List</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Task</a></li>
+                    <li><a href="#">Reports</a></li>
+                    <li class="has-dropdown">
+                        <button class="dropdown-btn">Users</button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Add New</a></li>
+                            <li><a href="#">List</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+            <header class="content-header">
+                <h1>View Project</h1>
+            </header>
+            <section class="project-details">
+                <div class="details-box">
+                    <div class="details-left">
+                        <p><strong>Company Registered Name:</strong> <span id="companyName">N/A</span></p>
+                        <p><strong>Email:</strong> <span id="email">N/A</span></p>
+                        <p><strong>Phone Number:</strong> <span id="phoneNumber">N/A</span></p>
+                        <p><strong>Address:</strong> <span id="address">N/A</span></p>
+                        <p><strong>City:</strong> <span id="city">N/A</span></p>
+                        <p><strong>Country:</strong> <span id="country">N/A</span></p>
+                        <p><strong>Description:</strong> <span id="description">N/A</span></p>
+                    </div>
+                    <div class="details-right">
+                        <p><strong>Start Date:</strong> <span id="startDate">N/A</span></p>
+                        <p><strong>End Date:</strong> <span id="endDate">N/A</span></p>
+                        <p><strong>General Manager Name:</strong> <span id="managerName">N/A</span></p>
+                        <p><strong>Company Activity:</strong> <span id="companyActivity">N/A</span></p>
+                        <p><strong>Service:</strong> <span id="service">N/A</span></p>
+                        <p><strong>Project Coordinator:</strong> <span id="coordinator">N/A</span></p>
+                        <p><strong>Status:</strong> <span id="status">N/A</span></p>
+                        <p><strong>Uploaded Files:</strong> <span id="uploadedFiles">N/A</span></p>
+                    </div>
+                </div>
+                <section class="project-actions">
+                    <div class="action-buttons">
+                        <button id="editProjectButton" class="btn-action btn-edit">Edit Project</button>
+                        <button id="deleteProjectButton" class="btn-action btn-delete">Delete Project</button>
+                    </div>
+                </section>
+                
+                <!-- Edit Project Modal -->
+                <div id="editModal" class="modal hidden">
+                    <div class="modal-content">
+                        <h2>Edit Project</h2>
+                        <form id="editProjectForm" class="form">
+                            <div class="form-group">
+                                <label for="editCompanyName">Company Registered Name:</label>
+                                <input type="text" id="editCompanyName" placeholder="Name the company">
+                            </div>
+                            <div class="form-group">
+                                <label for="editEmail">Email:</label>
+                                <input type="email" id="editEmail" placeholder="Enter email">
+                            </div>
+                            <div class="form-group">
+                                <label for="editPhoneNumber">Phone Number:</label>
+                                <input type="text" id="editPhoneNumber" placeholder="Enter the phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="editAddress">Address:</label>
+                                <textarea id="editAddress" rows="4" placeholder="Enter your Address"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="editCity">City:</label>
+                                <input type="text" id="editCity" placeholder="Enter your city">
+                            </div>
+                            <div class="form-group">
+                                <label for="editCountry">Country:</label>
+                                <input type="text" id="editCountry" placeholder="Enter your country">
+                            </div>
+                            <div class="form-group">
+                                <label for="editManagerName">General Manager Name:</label>
+                                <input type="text" id="editManagerName" placeholder="Enter the general manager name">
+                            </div>
+                            <div class="form-group">
+                                <label for="editCompanyActivity">Company Activity:</label>
+                                <select id="editCompanyActivity">
+                                    <option>Health</option>
+                                    <option>Food</option>
+                                    <option>Service</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="editService">Service:</label>
+                                <select id="editService">
+                                    <option>Issuing License</option>
+                                    <option>Foreign Investment</option>
+                                    <option>Issuing Trademark</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="editCoordinator">Project Coordinator:</label>
+                                <select id="editCoordinator">
+                                    <option>Abdullah</option>
+                                    <option>Jumana</option>
+                                    <option>Safwan</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="editStatus">Status:</label>
+                                <select id="editStatus">
+                                    <option>Pending</option>
+                                    <option>In Progress</option>
+                                    <option>Completed</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="editStartDate">Start Date:</label>
+                                <input type="date" id="editStartDate">
+                            </div>
+                            <div class="form-group">
+                                <label for="editEndDate">End Date:</label>
+                                <input type="date" id="editEndDate">
+                            </div>
+                            <div class="form-group">
+                                <label for="editFiles">Upload Files:</label>
+                                <input type="file" id="editFiles" name="editFiles">
+                            </div>
+                            <div class="form-group">
+                                <label for="editDescription">Description:</label>
+                                <textarea id="editDescription" rows="5" placeholder="Enter description"></textarea>
+                            </div>
+                            <div class="form-buttons">
+                                <button type="submit" class="btn-save">Save Changes</button>
+                                <button type="button" id="closeModal" class="btn-cancel">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="view_project.js"></script>
+</body>
+</html>
