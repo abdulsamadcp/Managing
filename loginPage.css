@@ -80,9 +80,9 @@ button {
   width: 100%;
 }
 
-button:hover {
+/* button:hover {
   background-color: #360063;
-}
+} */
 
 .create-account {
   font-size: 14px;
@@ -127,4 +127,32 @@ button:hover {
 }
 .green {
   background-color: green;
+}
+
+
+/* Password view option */
+
+/* Style for the password field container */
+.password-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.password-container input[type="password"],
+.password-container input[type="text"] {
+    flex: 1;
+    padding-right: 40px; /* Space for the toggle icon */
+}
+
+.toggle-password {
+    position: absolute;
+    width: 9%;
+    color: black;
+    background-color: white;
+    right: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    background: none;
+    border: none;
 }

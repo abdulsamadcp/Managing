@@ -52,3 +52,22 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
         document.querySelector('input[type="password"]').value = "";
     }
 });
+
+
+
+
+// password view
+
+document.addEventListener('DOMContentLoaded', () => {
+    const togglePasswordButton = document.querySelector('.toggle-password');
+    const passwordField = document.getElementById('password');
+
+    togglePasswordButton.addEventListener('click', () => {
+        // Toggle the type attribute between "password" and "text"
+        const currentType = passwordField.getAttribute('type');
+        passwordField.setAttribute('type', currentType === 'password' ? 'text' : 'password');
+
+        // Update the button text/icon
+        togglePasswordButton.textContent = currentType === 'password' ? '👁' : '👁';
+    });
+});
