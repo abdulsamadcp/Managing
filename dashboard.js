@@ -184,7 +184,7 @@ function loadProjects() {
     projectsContainer.innerHTML = projects.map((project, index) => `
         <tr>
             <td>${index + 1}</td>
-            <td>${project.companyName}</td>
+            <td>${project.companyRegisterName}</td>
             <td>${project.service}</td>
             <td>${project.status}</td>
             <td>
@@ -262,3 +262,84 @@ if (localStorage.getItem("isLoggedIn") !== "true") {
   alert("Access denied. Please log in first.");
   window.location.href = "index.html"; // Redirect to login page
 }
+
+
+
+// new displaying project in dashboard
+
+// Load projects and display them on the dashboard
+function loadProjects() {
+  const projects = JSON.parse(localStorage.getItem("projects")) || [];
+  const projectsContainer = document.getElementById("projectsContainer");
+
+  projectsContainer.innerHTML = ""; // Clear existing rows
+
+  // Dynamically populate the dashboard with projects
+  projects.forEach((project, index) => {
+      const projectRow = document.createElement("tr");
+      projectRow.innerHTML = `
+          <td>${index + 1}</td>
+          <td>${project.companyName}</td>
+          <td>${project.service}</td>
+          <td>
+              <span class="status ${project.status.replace(" ", "-").toLowerCase()}">
+                  ${project.status}
+              </span>
+          </td>
+          <td>
+              <div class="progress-bar-container">
+                  <div class="progress-bar ${getStatusClass(project.status)}" 
+                       style="width: ${getStatusProgress(project.status)}%;">
+                      ${getStatusProgress(project.status)}%
+                  </div>
+              </div>
+          </td>
+          <td>
+              <button onclick="viewProject(${project.id})">View</button>
+          </td>
+      `;
+      projectsContainer.appendChild(projectRow);
+  });
+}
+
+// Helper function to calculate progress percentage
+function getStatusProgress(status) {
+  switch (status) {
+      case "Pending":
+          return 20;
+      case "In Progress":
+          return 70;
+      case "Completed":
+          return 100;
+      default:
+          return 0;
+  }
+}
+
+// Helper function to determine status color
+function getStatusClass(status) {
+  switch (status) {
+      case "Pending":
+          return "red";
+      case "In Progress":
+          return "yellow";
+      case "Completed":
+          return "green";
+      default:
+          return "";
+  }
+}
+
+// Redirect to the "View Project" page
+function viewProject(projectId) {
+  const projects = JSON.parse(localStorage.getItem("projects")) || [];
+  const selectedProject = projects.find((project) => project.id === projectId);
+
+  if (selectedProject) {
+      localStorage.setItem("selectedProject", JSON.stringify(selectedProject));
+      window.location.href = "view_project.html";
+  }
+}
+
+// Load projects when the dashboard page is loaded
+document.addEventListener("DOMContentLoaded", loadProjects);

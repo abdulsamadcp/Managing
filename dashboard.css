@@ -81,7 +81,7 @@ table tbody tr:nth-child(even) {
     color: white;
 }
 
-.status.on-progress {
+.status.in-progress {
     background-color: yellow;
     color: black;
 }
