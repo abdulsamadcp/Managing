@@ -1,6 +1,25 @@
-// Project adding
 
+
+
+// progress bar
 document.getElementById("addProjectButton").addEventListener("click", (event) => {
+    event.preventDefault();
+  
+    const newProject = {
+      id: Date.now(),
+      name: document.getElementById("company-name").value,
+      service: document.getElementById("service").value,
+      status: document.getElementById("status").value, // Capture status
+    };
+  
+ 
+  });
+  
+
+
+  // new display showing
+
+  document.getElementById("addProjectButton").addEventListener("click", (event) => {
     event.preventDefault(); // Prevent form submission
 
     const project = {
@@ -18,7 +37,6 @@ document.getElementById("addProjectButton").addEventListener("click", (event) =>
         status: document.getElementById("status").value,
         startDate: document.getElementById("start-date").value,
         endDate: document.getElementById("end-date").value,
-        uploadedFiles: document.getElementById("myFile").value,
         description: document.getElementById("description").value,
     };
 
@@ -34,18 +52,3 @@ document.getElementById("addProjectButton").addEventListener("click", (event) =>
     window.location.href = "dashboard.html";
 });
 
-
-// progress bar
-document.getElementById("addProjectButton").addEventListener("click", (event) => {
-    event.preventDefault();
-  
-    const newProject = {
-      id: Date.now(),
-      name: document.getElementById("company-name").value,
-      service: document.getElementById("service").value,
-      status: document.getElementById("status").value, // Capture status
-    };
-  
- 
-  });
-  
