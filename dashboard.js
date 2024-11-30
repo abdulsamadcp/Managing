@@ -254,3 +254,11 @@ function loadProjects() {
   // Call loadProjects when the dashboard loads
   document.addEventListener("DOMContentLoaded", loadProjects);
   
+
+  // login authentication
+
+  // Restrict access to the dashboard
+if (localStorage.getItem("isLoggedIn") !== "true") {
+  alert("Access denied. Please log in first.");
+  window.location.href = "index.html"; // Redirect to login page
+}
