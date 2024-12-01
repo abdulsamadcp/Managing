@@ -52,3 +52,18 @@ document.getElementById("addProjectButton").addEventListener("click", (event) =>
     window.location.href = "dashboard.html";
 });
 
+// backend connection
+
+async function addProject(title, description) {
+  const response = await fetch('http://127.0.0.1:8000/api/projects/add/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ title, description }),
+  });
+
+  if (response.ok) {
+      alert('Project added successfully!');
+  } else {
+      alert('Failed to add project.');
+  }
+}

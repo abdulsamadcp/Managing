@@ -343,3 +343,9 @@ function viewProject(projectId) {
 
 // Load projects when the dashboard page is loaded
 document.addEventListener("DOMContentLoaded", loadProjects);
+
+
+
+function toggleLanguage() {
+  document.body.classList.toggle('rtl');
+}
