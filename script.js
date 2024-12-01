@@ -23,6 +23,10 @@ const mockUsers = [
         email: "safvanmelethil2@gmail.com",
         password: "Safvan@123",
     },
+    {
+        email: "abdulsamadc087@gmail.com",
+        password: "Abdul@123"
+    }
 ];
 
 // Login form submit event listener
