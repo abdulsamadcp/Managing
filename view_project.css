@@ -330,3 +330,158 @@ body {
     display: flex;
     justify-content: space-between;
 }
+
+
+
+/* General reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    direction: rtl;
+    text-align: right;
+}
+
+/* Container styling */
+.container {
+    display: flex;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 240px;
+    background-color: #4b0082;
+    color: white;
+    height: 100vh;
+    padding: 20px 15px;
+}
+
+.sidebar-header {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+/* Dropdown menu */
+.has-dropdown {
+    position: relative;
+}
+
+.dropdown-btn {
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px 10px;
+    text-align: right;
+    width: 100%;
+}
+
+.dropdown-menu {
+    display: none;
+    list-style: none;
+    margin-top: 5px;
+    padding-right: 20px;
+}
+
+.dropdown-menu li a {
+    font-size: 14px;
+}
+
+/* Content styling */
+.content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-details {
+    margin-top: 20px;
+}
+
+.details-box {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.details-box .details-left p strong,
+.details-box .details-right p strong {
+    display: block;
+}
+
+.details-box .details-left,
+.details-box .details-right {
+    text-align: right;
+}
+
+.task-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.task-list table th, .task-list table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.task-list table th {
+    background-color: #eee;
+}
+
+/* Action buttons */
+.action-buttons {
+    display: flex;
+    justify-content: flex-start; /* Buttons aligned to the right */
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Modal styling */
+.modal-content {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Ensure form inputs are responsive */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+}

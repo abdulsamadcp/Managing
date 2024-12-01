@@ -7,6 +7,33 @@ body {
     color: #333;
 }
 
+body.rtl{
+    direction: rtl;
+    text-align: right;
+}
+body.rtl .sidebar{
+    float: right;
+}
+
+body.rtl .main-content{
+    margin-right: 0px;
+    margin-left: 0;
+}
+body.rtl table th,
+body.rtl table td {
+    text-align: right;
+}
+body.rtl header {
+    flex-direction: row-reverse;
+}
+body.rtl header .user-options {
+    text-align: left; /* Optionally keep user options left-aligned */
+}
+body.rtl .sidebar nav ul li ul {
+    padding-left: 0;
+    padding-right: 15px; /* Move padding to the right */
+}
+
 
 
 /* Main content */
@@ -187,6 +214,7 @@ table tbody tr:nth-child(even) {
 
 .auth-button {
     background-color: transparent;
+    padding: 5px 10px;
     border: none;
     color: #4b0082;
     font-size: 16px;
@@ -201,16 +229,17 @@ table tbody tr:nth-child(even) {
 .dropdown {
     position: absolute;
     top: 100%;
-    right: 0;
+    left: 0;
     background-color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
     list-style: none;
     margin: 5px 0 0;
     padding: 0;
-    width: 120px;
+    width: 80px;
     display: none; /* Hidden by default */
     z-index: 1000;
+    
 }
 
 .dropdown.visible {
