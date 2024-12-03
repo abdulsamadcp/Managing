@@ -12,17 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
 // Mock user data for authentication (replace with API call for real-world apps)
 const mockUsers = [
     {
-        email: "test@example.com",
-        password: "password123",
+        email: "info@amrtm.com.sa",
+        password: "info@123456789",
     },
-    {
-        email: "user@example.com",
-        password: "userpass",
-    },
-    {
-        email: "safvanmelethil2@gmail.com",
-        password: "Safvan@123",
-    },
+    
     {
         email: "abdulsamadc087@gmail.com",
         password: "Abdul@123"
