@@ -294,6 +294,7 @@ function loadProjects() {
                   </div>
               </div>
           </td>
+          <td>${project.coordinator}</td>
           <td>
               <button onclick="viewProject(${project.id})">View</button>
           </td>
@@ -350,66 +351,4 @@ function toggleLanguage() {
   document.body.classList.toggle('rtl');
 }
 
-function loadProjects() {
-  const projects = JSON.parse(localStorage.getItem("projects")) || [];
-  const projectsContainer = document.getElementById("projectsContainer");
-
-  projectsContainer.innerHTML = ""; // Clear existing rows
-
-  projects.forEach((project, index) => {
-      const projectRow = `
-          <tr>
-              <td>${index + 1}</td>
-              <td>${project.projectName}</td>
-              <td>${project.service}</td>
-              <td>
-                  <span class="status ${project.status.replace(" ", "-").toLowerCase()}">
-                      ${project.status}
-                  </span>
-              </td>
-              <td>
-                  <div class="progress-bar-container">
-                      <div class="progress-bar ${getStatusClass(project.status)}" 
-                           style="width: ${getStatusProgress(project.status)}%;">
-                          ${getStatusProgress(project.status)}%
-                      </div>
-                  </div>
-              </td>
-              <td>${project.coordinator || "Unassigned"}</td> <!-- New column -->
-              <td>
-                  <button onclick="viewProject(${project.id})">View</button>
-              </td>
-          </tr>
-      `;
-      projectsContainer.innerHTML += projectRow;
-  });
-}
-
-// Helper function to calculate progress percentage
-function getStatusProgress(status) {
-  switch (status) {
-      case "Pending":
-          return 20;
-      case "In Progress":
-          return 70;
-      case "Completed":
-          return 100;
-      default:
-          return 0;
-  }
-}
-
-// Helper function to determine status color
-function getStatusClass(status) {
-  switch (status) {
-      case "Pending":
-          return "red";
-      case "In Progress":
-          return "yellow";
-      case "Completed":
-          return "green";
-      default:
-          return "";
-  }
-}
 
